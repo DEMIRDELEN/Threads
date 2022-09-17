@@ -41,9 +41,6 @@ public class MultiThreading01 {
 		
 		System.out.println("WithMultiThread Elapsed Time:"+(endTime2-startTime2));
 		
-		
-		
-		
 	}
 
 }
@@ -68,6 +65,10 @@ class CounterWithoutMultiThread{
 class CounterWithMultiThread extends Thread{
 	private int threadNum;
 	
+	public CounterWithMultiThread(int threadNum) {
+		this.threadNum=threadNum;
+	}
+	
 	@Override
 	public void run() {
 	    try {
@@ -78,9 +79,6 @@ class CounterWithMultiThread extends Thread{
 		}
 	}
 	
-	public CounterWithMultiThread(int threadNum) {
-		this.threadNum=threadNum;
-	}
 	
 	public void countMe() throws InterruptedException {
 		for (int i = 1; i <=10; i++) {
