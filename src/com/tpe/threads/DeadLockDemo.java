@@ -54,10 +54,5 @@ public class DeadLockDemo {
 
         thread2.start();
 
-
-
-
-
-
     }
 }
